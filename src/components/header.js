@@ -3,6 +3,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
+import Nav from './nav'
+
 const Title=styled.h1`
 font-family: pervitinadex;
 	font-size: 3.5em;
@@ -12,8 +14,9 @@ font-family: pervitinadex;
   transition: opacity 100ms ease;
   &:hover{
     opacity:0.95;
-  }
-`
+  }`
+const Description=styled.p`
+margin-bottom:1.5em`
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -29,7 +32,8 @@ const Header = () => {
   return(
   <header>
       <Title><Link to="/">{data.site.siteMetadata.title}</Link></Title>
-      <p>{data.site.siteMetadata.description}</p>
+      <Description>{data.site.siteMetadata.description}</Description>
+      <Nav/>
   </header>)
 }
 export default Header

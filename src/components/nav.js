@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from 'gatsby'
 import { useStaticQuery } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -29,7 +28,16 @@ return(
         }
         li, a{
             display:inline-block;
-        }`}
+        }
+        a{
+            margin:0em 1em 0em 1em;
+            color:rgba(255,255,255,0.8);
+        }
+        a:hover{
+                text-decoration: underline;
+	            color:rgba(255,255,255,1);
+        }
+        `}
     </style></>
 )
 }

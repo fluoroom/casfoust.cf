@@ -7,7 +7,6 @@
 
 import React from "react"
 import Header from "./header"
-import Nav from './nav'
 import Footer from './footer'
 import "./layout.css"
 import styled from "styled-components"
@@ -29,7 +28,6 @@ const Layout = ({ children }) => (
     <>
     <BG/>
       <Header/>
-      <Nav/>
       <main>{children}</main>
       <Footer/>
     </>
