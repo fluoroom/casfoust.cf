@@ -1,42 +1,35 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react" 
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Title=styled.h1`
+font-family: pervitinadex;
+	font-size: 3.5em;
+	opacity:1;
+  margin-left: -0.35em;
+  text-transform:uppercase;
+  transition: opacity 100ms ease;
+  &:hover{
+    opacity:0.95;
+  }
+`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+          description
+        }
+      }
+    }
+  `)
+  return(
+  <header>
+      <Title><Link to="/">{data.site.siteMetadata.title}</Link></Title>
+      <p>{data.site.siteMetadata.description}</p>
+  </header>)
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
