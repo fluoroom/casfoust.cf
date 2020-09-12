@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header>
       <Title><Link to="/"><RgbSplitter>{data.site.siteMetadata.title}</RgbSplitter></Link></Title>
-      <Description><RgbSplitter>{data.site.siteMetadata.description}</RgbSplitter></Description>
+      <Description>{data.site.siteMetadata.description}</Description>
       <Nav />
     </header>
   )

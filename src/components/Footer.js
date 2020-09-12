@@ -4,11 +4,11 @@ import RgbSplitter from './RgbSplitter'
 
 const Footer = () => (
   <footer>
-    <p><RgbSplitter>
+    <p>
       &copy; 2020 casfoust.
       <br />
       all rights reserved
-      </RgbSplitter></p>
+      </p>
     <style jsx>
       {`
         footer {
