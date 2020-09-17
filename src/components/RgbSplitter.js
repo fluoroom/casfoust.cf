@@ -51,6 +51,7 @@ const Splitter = ({ children }) => {
             position:relative;
             display:inline-block;
             mix-blend-mode:difference;
+            overflow:visible;
         }
         .hidden{
             visibility:hidden;
@@ -60,6 +61,7 @@ const Splitter = ({ children }) => {
             display: block;
             bottom:0;
             mix-blend-mode:difference;
+            overflow:visible;
         }`}
       </style>
       <div id='wrapper'>

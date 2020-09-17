@@ -1,8 +1,9 @@
 import React from 'react'
+import BGimg from '../images/bg.png'
 
-import RgbSplitter from './RgbSplitter'
 
-const Footer = () => (
+const Footer = (notSticky) => {
+  return (
   <footer>
     <p>
       &copy; 2020 casfoust.
@@ -12,11 +13,9 @@ const Footer = () => (
     <style jsx>
       {`
         footer {
-          position: fixed;
-          bottom: 0px;
+          position: relative;
           margin: 2em auto 2em auto;
-          width: 100vw;
-          z-index: -1;
+          z-index: 99;
         }
         p {
           font-size: 0.8em;
@@ -24,7 +23,7 @@ const Footer = () => (
         }
       `}
     </style>
-  </footer>
-)
+  </footer>)
+}
 
 export default Footer

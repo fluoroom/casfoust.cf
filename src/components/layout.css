@@ -28,5 +28,21 @@ header{
 }
 main{
   display: inline-block;
-  margin-bottom: 7em;
+  margin-bottom: 2em;
+}
+p, h1, h2, h3, h4, ul{
+	text-align: center;
+	margin:0 auto;
+}
+p{
+	max-width: 640px;
+	hyphens: none;
+	word-break: keep-all;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+}
+@media (max-width:640px){
+	p, h2, h3, ul{
+		max-width: 95vw;
+	}
 }

@@ -7,7 +7,7 @@
 
 import React, { useLayoutEffect, useState } from 'react'
 
-const Player = ({ channel }) => {
+const Player = ({ channel, maxWidth }) => {
   const [dimensions, setDimensions] = useState({})
   const [hostname, setHostname] = useState('casfoust.cf')
   const src = 'https://player.twitch.tv/?channel=' + channel + '&parent=' + hostname + '&muted=false&autoplay=true'
@@ -20,10 +20,10 @@ const Player = ({ channel }) => {
         a = 'client'
         e = document.documentElement || document.body
       }
-      if (e[a + 'Width'] < 852) {
+      if (e[a + 'Width'] < maxWidth) {
         return e[a + 'Width']
       } else {
-        return 852
+        return maxWidth
       }
     }
     setDimensions({
@@ -33,7 +33,8 @@ const Player = ({ channel }) => {
   }, [])
 
   return (
-    <iframe
+    <>
+    <iframe className="iframe"
       src={src}
       height={dimensions.height}
       width={dimensions.width}
@@ -41,6 +42,12 @@ const Player = ({ channel }) => {
       scrolling='no'
       allowFullScreen='true'
     />
+    <style jsx>{`
+    iframe{
+      margin-bottom:2em;
+    }
+    `}</style>
+    </>
   )
 }
 

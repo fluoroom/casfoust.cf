@@ -9,7 +9,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const navlinks = [
     { name: 'spotify', url: 'https://open.spotify.com/artist/6b5pAL3DdXENmnTCMmLaq1' },
     { name: 'soundcloud', url: 'http://soundcloud.com/casfoust' },
-    { name: 'facebook', url: 'https://www.facebook.com/casfoustmusic' }
+    { name: 'facebook', url: 'https://www.facebook.com/casfoustmusic' },
+    { name: 'microKORG patches!', url: '/patches' }
   ]
   navlinks.forEach(navlink => {
     const node = {

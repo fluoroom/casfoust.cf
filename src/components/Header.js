@@ -12,6 +12,7 @@ font-family: pervitinadex;
   margin-left: -0.35em;
   text-transform:uppercase;
   transition: opacity 100ms ease;
+  overflow:visible;
   &:hover{
     opacity:0.95;
   }`

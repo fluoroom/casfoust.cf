@@ -1,47 +1,32 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import FbImg from '../images/fb.png'
+import ScImg from '../images/sc.png'
+import SpImg from '../images/sp.png'
+import { Link } from "gatsby"
 
-const Nav = () => {
-  const data = useStaticQuery(graphql`
-   query NavLinks{
-    allNavlink{
-     nodes{
-        name
-        url
-     }}}
- `)
+const Nav = (noPatches) => {
   return (
     <>
       <nav>
         <ul>
-          {data.allNavlink.nodes.map((link) => (
-            <li key={link.name}><a href={link.url}>{link.name}</a></li>
-          ))}
+          <li><a href="https://open.spotify.com/artist/6b5pAL3DdXENmnTCMmLaq1"><img src={SpImg} alt="spotify"/></a></li>
+          <li><a href="https://soundcloud.com/casfoust"><img src={ScImg} alt="soundcloud"/></a></li>
+          <li><a href="https://facebook.com/casfoustmusic"><img src={FbImg} alt="facebook"/></a></li>
         </ul>
       </nav>
       <style jsx>
         {`
-        ul{
-            padding:0.5em 1em;
-            display: inline-block;
-            border:1px dotted #888;
-            background-color: rgba(0,0,0,0.5);
-        }
-        li, a{
-            display:inline-block;
+        a>img{
+          width:40px;
         }
         a{
-            margin:0em 1em 0em 1em;
-            color:rgba(255,255,255,0.8);
+          margin:0px 20px;
         }
         a:hover{
-                text-decoration: underline;
-              color:rgba(255,255,255,1);
+          border-bottom:1px solid white;
         }
-        @media (max-width:370px){
-          a{
-            margin:0em 0.5em 0em 0.5em;
-        }
+        ul>li{
+          display:inline-block;
         }
         `}
       </style>
