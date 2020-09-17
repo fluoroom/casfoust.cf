@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
 import Youtube from '../components/YoutubeEmbed'
-import Seo from '../components/Seo'
+import Seo from '../components/SEO'
 
 const Title = styled.h2`
     font-size: 2em;
