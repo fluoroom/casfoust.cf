@@ -13,8 +13,9 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`
-      },
-      {
+      }
+    },
+    {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
           // The property ID; the tracking code won't be generated without it
@@ -41,9 +42,8 @@ module.exports = {
           sampleRate: 5,
           siteSpeedSampleRate: 10,
           cookieDomain: "casfoust.cf",
-        },
-      }
-    },
+        }
+      },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp'
 
