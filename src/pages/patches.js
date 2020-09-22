@@ -47,12 +47,12 @@ const Patches = () => {
             }
             form input{
                 opacity:0.85;
-                border:1px solid rgba(255,255,255,0);
+                border:1px dashed rgba(255,255,255,0);
                 padding: 0.5em;
             }
             form input:hover{
                     opacity:1;
-                    border:1px solid rgba(255,255,255,0.5);
+                    border:1px dashed rgba(255,255,255,0.5);
                 }
             }
             @media(max-width:400px){

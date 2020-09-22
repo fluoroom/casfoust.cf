@@ -50,7 +50,7 @@ main p, main h1, main h3, main h4, main ul{
 	text-align: left;
 }
 main p, main ul{
-	
+	margin:0 auto;
 	margin-bottom:1em;
 }
 main ul li{

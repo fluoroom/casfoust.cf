@@ -60,6 +60,8 @@ const Splitter = ({ children }) => {
             position:absolute;
             display: block;
             bottom:0;
+            width:112%;
+            left:-6%;
             mix-blend-mode:difference;
             overflow:visible;
         }`}

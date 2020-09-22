@@ -25,6 +25,7 @@ const RadioStatus = (props) => {
       <style jsx>{`
       p{
         line-height:2em;
+        text-align:center;
       }
       span{
         border-radius: 3px;

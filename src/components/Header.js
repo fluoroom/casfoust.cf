@@ -2,7 +2,6 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import RgbSplitter from './RgbSplitter'
-
 import Nav from './Nav'
 
 const Title = styled.h1`
