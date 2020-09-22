@@ -34,7 +34,7 @@ const Player = ({ videoId, maxWidth }) => {
     <>
     <style jsx>{`
     .iframe{
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
     }
     `}</style>
     <iframe width={dimensions.width} height={dimensions.height} src={src} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="iframe"></iframe>

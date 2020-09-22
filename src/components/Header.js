@@ -17,7 +17,7 @@ font-family: pervitinadex;
     opacity:0.95;
   }`
 const Description = styled.p`
-margin-bottom:1.5em`
+margin-bottom:1.5em;`
 
 const Header = () => {
   const data = useStaticQuery(graphql`

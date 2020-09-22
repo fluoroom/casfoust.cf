@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Youtube from '../components/YoutubeEmbed'
 import Seo from '../components/SEO'
 import KorgImg from '../images/korg.png'
+import PayPalBtnImg from '../images/paypalbtn1.png'
 
 const Title = styled.h2`
     font-size: 2em;
@@ -35,24 +36,21 @@ const Patches = () => {
     <Layout>
         <Seo title="microKORG Patches" />
         <style jsx>{`
-            ul{
-                text-align:left;
-                margin: 0 auto;
-                display: inline-block;
-                margin-bottom: 1.5em;
-            }
-            ul li{
-                list-style: square inside;
-            }
-            h3{
-                font-size:1.2em;
-                line-height:2em;
-            }
             .titleContainer{
                 display:block;
             }
             .titleContainer img{
                 max-width:400px;
+            }
+            form input{
+                opacity:0.85;
+                border:1px solid rgba(255,255,255,0);
+                padding: 0.5em;
+            }
+            form input:hover{
+                    opacity:1;
+                    border:1px solid rgba(255,255,255,0.5);
+                }
             }
             @media(max-width:400px){
                 .titleContainer img{
@@ -80,9 +78,10 @@ const Patches = () => {
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"/>
 <input type="hidden" name="hosted_button_id" value="P5928S4ATK99S"/>
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<input type="image" src={PayPalBtnImg} border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
 </form>
+
 
         </article>
     </Layout>
