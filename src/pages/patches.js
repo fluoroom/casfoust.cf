@@ -11,6 +11,8 @@ const Title = styled.h2`
     text-shadow:0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black;
     margin-top:-4.45em;
     margin-bottom:3.7em;
+    margin-left:auto;
+    margin-right:auto;
     @media(max-width:360px){
         font-size:1.8em;
         margin-top:-4.85em;
@@ -38,6 +40,7 @@ const Patches = () => {
         <style jsx>{`
             .titleContainer{
                 display:block;
+                text-align:center;
             }
             .titleContainer img{
                 max-width:400px;

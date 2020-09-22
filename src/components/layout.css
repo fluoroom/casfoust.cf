@@ -62,6 +62,8 @@ main h3{
 }
 @media (max-width:640px){
 	p, h2, h3, ul{
-		max-width: 95vw;
+		max-width: 90vw!important;
+		margin:0 auto;
+		display: block;
 	}
 }
