@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 
 const StyledLink = styled(props => <Link {...props} />)`
   color:rgba(255,255,255,0.8);
+  display:inline-block;
   padding:0.5em 1em;
   border:1px dashed #ccc;
   background-color:rgba(0,0,0,0.5);

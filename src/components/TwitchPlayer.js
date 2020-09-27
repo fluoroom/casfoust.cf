@@ -45,6 +45,7 @@ const Player = ({ channel, maxWidth }) => {
     <style jsx>{`
     iframe{
       margin-bottom:2em;
+      display:block;
     }
     `}</style>
     </>
