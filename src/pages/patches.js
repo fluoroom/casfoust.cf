@@ -5,6 +5,7 @@ import Youtube from '../components/YoutubeEmbed'
 import Seo from '../components/SEO'
 import KorgImg from '../images/korg.png'
 import PayPalBtnImg from '../images/paypalbtn1.png'
+import MpBtn from '../images/mp.png'
 
 const Title = styled.h2`
     font-size: 2em;
@@ -45,15 +46,25 @@ const Patches = () => {
             .titleContainer img{
                 max-width:400px;
             }
-            form input{
+            .pay{
                 opacity:0.85;
                 border:1px dashed rgba(255,255,255,0);
                 padding: 0.5em;
+                max-width:250px;
             }
-            form input:hover{
+            .pay:hover{
                     opacity:1;
                     border:1px dashed rgba(255,255,255,0.5);
                 }
+            }
+            a{
+                text-decoration:underline;
+            }
+            a:hover{
+                font-weight:bold;
+            }
+            .center-text{
+                text-align:center;
             }
             @media(max-width:400px){
                 .titleContainer img{
@@ -61,7 +72,7 @@ const Patches = () => {
                 }
             }
         `}</style>
-        <article>
+        <section>
         <div className="titleContainer"><a href="https://www.korg.com/us/products/synthesizers/microkorg/" target="_blank"><img src={KorgImg}/></a><Title>Casfoust's microKORG patches!</Title></div>
         <p>I've owned my microKORG for 4 years now and produced a lot of all&#x2011;original patches, of which i've chosen the best ones and have put them in this awesome patch bank.</p>
         <Youtube videoId="HDdGfK8BiQ0" maxWidth="640"/>
@@ -80,13 +91,14 @@ const Patches = () => {
         <p><b>Get all the 67 patches for only $9!<br/>Actually the best price per patch on the market!</b></p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"/>
-<input type="hidden" name="hosted_button_id" value="P5928S4ATK99S"/>
-<input type="image" src={PayPalBtnImg} border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<input type="hidden" name="hosted_button_id" value="FQHLWK9R5UPRJ"/>
+<input className="pay" type="image" src={PayPalBtnImg} border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
 </form>
-
-
-        </article>
+        <p className="center-text"><a href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=113411492-ac03f132-639a-4877-967e-af4f0cf5bea4"><img src={MpBtn} className="pay" alt="MercadoPago"/></a></p>
+        <p>In case of any problem with your purchase, please contact me <a href="mailto:nico.vial.giudici@gmail.com">here</a>.</p>
+        <p>En caso de tener algún problema con tu compra, por favor contactame <a href="mailto:nico.vial.giudici@gmail.com">acá</a>.</p>
+        </section>
     </Layout>
   )
 }
