@@ -66,9 +66,23 @@ const Patches = () => {
             .center-text{
                 text-align:center;
             }
+            #payBtns{
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+                flex-direction:columns;
+                margin:2em 0 1em 0;
+                width:100%;
+            }
             @media(max-width:400px){
                 .titleContainer img{
                     max-width:95vw;
+                }
+            }
+            @media(max-width:450px){
+                #payBtns{
+                    display:block;
+                    margin:0 0 0 0;
                 }
             }
         `}</style>
@@ -89,13 +103,13 @@ const Patches = () => {
             <li><b>.TXT</b> human-readable parameter recipes.</li>
         </ul>
         <p><b>Get all the 67 patches for only $9!<br/>Actually the best price per patch on the market!</b></p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <div id="payBtns"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"/>
 <input type="hidden" name="hosted_button_id" value="FQHLWK9R5UPRJ"/>
 <input className="pay" type="image" src={PayPalBtnImg} border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
 </form>
-        <p className="center-text"><a href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=113411492-ac03f132-639a-4877-967e-af4f0cf5bea4"><img src={MpBtn} className="pay" alt="MercadoPago"/></a></p>
+        <p className="center-text"><a href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=113411492-ac03f132-639a-4877-967e-af4f0cf5bea4"><img src={MpBtn} className="pay" alt="MercadoPago"/></a></p></div>
         <p>In case of any problem with your purchase, please contact me <a href="mailto:nvialgiudici@gmail.com">here</a>.</p>
         <p>En caso de tener algún problema con tu compra, por favor contactame <a href="mailto:nvialgiudici@gmail.com">acá</a>.</p>
         </section>
