@@ -96,8 +96,8 @@ const Patches = () => {
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
 </form>
         <p className="center-text"><a href="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=113411492-ac03f132-639a-4877-967e-af4f0cf5bea4"><img src={MpBtn} className="pay" alt="MercadoPago"/></a></p>
-        <p>In case of any problem with your purchase, please contact me <a href="mailto:nico.vial.giudici@gmail.com">here</a>.</p>
-        <p>En caso de tener algún problema con tu compra, por favor contactame <a href="mailto:nico.vial.giudici@gmail.com">acá</a>.</p>
+        <p>In case of any problem with your purchase, please contact me <a href="mailto:nvialgiudici@gmail.com">here</a>.</p>
+        <p>En caso de tener algún problema con tu compra, por favor contactame <a href="mailto:nvialgiudici@gmail.com">acá</a>.</p>
         </section>
     </Layout>
   )
