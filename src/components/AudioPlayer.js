@@ -17,13 +17,12 @@ function IcecastPlayer ({ title, status, src }) {
           controls
           autoPlay
           content-type="audio/aac"
-          x-webkit-airplay // not sure if this works, if not, try xWebkitAirplay instead
+          x-webkit-airplay 
           type="audio/aac"
           title={title}
           src={src}
           onPlay={handleOnPlay}
         >
-          <track>casfoust</track>
         </audio>
       </div>
     )

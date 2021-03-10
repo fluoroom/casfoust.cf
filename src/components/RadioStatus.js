@@ -43,7 +43,7 @@ const RadioStatus = (props) => {
         color:black;
       }
       .p2{
-        background-color:#0e0;
+        background-color:#00cc00;
         color:white;
       }
       `}
