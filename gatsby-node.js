@@ -25,7 +25,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     actions.createNode(node)
   })
   const icecast = {
-    host: 'http://korgalias.ddns.net',
+    host: 'https://korgalias.ddns.net',
     port: '8443'
   }
   const IceNode = {
