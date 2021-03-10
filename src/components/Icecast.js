@@ -20,9 +20,11 @@ const Icecast = () => {
     function getradiodata () {
       fetch(datasource)
         .then((result) => result.json()).then((result) => {
+          if (result.icestats.source.server_url == "casfoust.cf"){
           if (result.icestats.source) {
             if (radiostatus !== 2) { setradiostatus(2) }
           } else if (radiostatus !== 1) { setradiostatus(1) }
+        }else if (radiostatus !== 0) { setradiostatus(0) }
         }).catch(() => {
           if (radiostatus !== 0) { setradiostatus(0) }
         })
@@ -37,7 +39,7 @@ const Icecast = () => {
   return (
     <>
       <RadioStatus status={radiostatus} />
-      <AudioPlayer title="hola" status={radiostatus} src={source} />
+      <AudioPlayer title="casfoust" status={radiostatus} src={source} />
     </>
   )
 }
