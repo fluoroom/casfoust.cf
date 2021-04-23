@@ -102,7 +102,7 @@ const Patches = () => {
             <li><b>.PRG</b> files (microKORG Sound Editor for Windows)</li>
             <li><b>.TXT</b> human-readable parameter recipes.</li>
         </ul>
-        <p><b>Get all the 67 patches for only $9!<br/>Actually the best price per patch on the market!</b></p>
+        <p><strong>Get all the 67 patches for only $9!</strong></p>
         <div id="payBtns"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"/>
 <input type="hidden" name="hosted_button_id" value="FQHLWK9R5UPRJ"/>
